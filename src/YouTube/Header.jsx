@@ -11,8 +11,8 @@ const Header = () => {
 
     }
   return (
-    <div className=" shadow-lg grid grid-flow-col m-2 p-2 items-center relative bg-white z-10 w-screen">
-      <div className="flex col-span-1.5   ">
+    <div className="fixed shadow-xl grid grid-flow-col p-4 items-center bg-white/90 z-10 w-screen">
+      <div className="flex col-span-1.5  bg-white ">
         <img
           className="h-10 cursor-pointer "
           src={!isMenuOpen? "https://www.svgrepo.com/show/312300/hamburger-menu.svg":"https://static.vecteezy.com/system/resources/previews/021/190/319/non_2x/dotted-burger-menu-outline-icon-in-transparent-background-basic-app-and-web-ui-bold-line-icon-eps10-free-vector.jpg"}
