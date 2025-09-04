@@ -3,10 +3,11 @@ import VideoCard from "./VideoCard";
 import axios from "axios";
 import { Youtube_API_KEY } from "../utils/constants";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const VideoContainer = () => {
   const [videoData, setVideoData] = useState([]);
-  const isMenuOpen= useSelector(store=> store.app.isMenuOpen)
+  const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
   const getData = () => {
     axios
       .get(
@@ -15,7 +16,7 @@ const VideoContainer = () => {
       )
       .then((response) => {
         setVideoData(response.data.items);
-        console.log(response.data.items);
+        //console.log(response.data.items);
       })
       .catch((error) => {
         console.log(error);
@@ -25,9 +26,15 @@ const VideoContainer = () => {
     getData();
   }, []);
   return (
-    <div className={`flex flex-wrap transition-all duration-300 ${isMenuOpen ? "ml-40" : "ml-0"}`}>
+    <div
+      className={`flex flex-wrap transition-all duration-300 ${
+        isMenuOpen ? "ml-40" : "ml-0"
+      }`}
+    >
       {videoData.map((video) => (
-        <VideoCard key={video.id} info={video} />
+        <Link key={video.id} to={"/watch?v=" + video.id}>
+          <VideoCard info={video} />
+        </Link>
       ))}
     </div>
   );

@@ -1,24 +1,26 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link,useLocation } from "react-router-dom";
 
 const SideBar = () => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
-
+ const location = useLocation();
+  const isWatchPage = location.pathname === "/watch";
   return (
     <div>
       {isMenuOpen ? (
         <div className="fixed top-0 left-0 shadow-2xl py-2 w-56 h-full bg-white  ">
           <div className="overflow-y-scroll h-[calc(100vh-4rem)]  ">
             <ul className="m-3 p-3 border-b border-gray-300 mt-21">
-              <li className="hover:bg-gray-100 text-xl rounded px-2 py-1 cursor-pointer">
+             <Link to={"/"}><li className="hover:bg-gray-100 text-xl rounded px-2 py-1 cursor-pointer">
                 🏡 Home
-              </li>
+              </li> </Link>
               <li className="hover:bg-gray-100 text-xl rounded px-2 py-1 cursor-pointer">
                 🎬 Shorts
               </li>
-              <li className="hover:bg-gray-100 text-xl rounded px-2 py-1 cursor-pointer">
+              <Link to={"/"}><li className="hover:bg-gray-100 text-xl rounded px-2 py-1 cursor-pointer">
                 ▶️ Videos
-              </li>
+              </li></Link>
               <li className="hover:bg-gray-100 text-xl rounded px-2 py-1 cursor-pointer">
                 📡 Live
               </li>
@@ -89,14 +91,15 @@ const SideBar = () => {
           </div>
         </div>
       ) : (
-        <ul className="m-1 p-3 border-b border-gray-300 mt-10 w-40  top-0 ">
-          <li className="hover:bg-gray-300 text-xl rounded px-2  mt-6 py-1 w-1/2 cursor-pointer ">
+      !isWatchPage && <div className=" ">
+        <ul className="  m-1 p-3 border-b border-gray-300 mt-10 ">
+        <Link to={"/"} > <li className="hover:bg-gray-300 text-xl rounded px-2  mt-6 py-1 w-1/2 cursor-pointer ">
             🏡 Home
-          </li>
+          </li> </Link>
           <li className="hover:bg-gray-300 text-xl rounded px-2 mt-6 py-1  cursor-pointer">
             ⭐ Subscriptions
           </li>
-          <li className="hover:bg-gray-300 text-xl rounded px-2 mt-6 py-1  cursor-pointer">
+          <li className="hover:bg-gray-300 text-xl rounded px-2 mt-6 py-1 cursor-pointer">
             📺 WatchLater
           </li>
           <li className="hover:bg-gray-300 text-xl rounded px-2 mt-6 py-1 w-1/2  cursor-pointer">
@@ -109,7 +112,7 @@ const SideBar = () => {
             ⚙️ More
           </li>
         </ul>
-      )}
+      
       <p>Made by Himanshu 💕</p>
       <div className="flex gap-4 mt-4">
         <a href="https://github.com/Himanshuu-02">
@@ -134,7 +137,11 @@ const SideBar = () => {
           />
         </a>
       </div>
+      </div>
+      )
+      }
     </div>
+      
   );
 };
 export default SideBar;

@@ -9,8 +9,11 @@ import { createSlice } from "@reduxjs/toolkit";
         toggleState: (state)=>{
             state.isMenuOpen=!state.isMenuOpen
 
+        },
+        closeState:(state)=>{
+            state.isMenuOpen=false
         }
     }
 })
 export default appSlice.reducer
-export const {toggleState}=appSlice.actions;
+export const {toggleState,closeState}=appSlice.actions;
