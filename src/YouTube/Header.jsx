@@ -158,7 +158,7 @@ const Header = () => {
     };
   }, [searchQuery]);
   return (
-    <div className="fixed shadow-xl grid grid-flow-col p-4 items-center bg-white/90 z-10 w-screen">
+    <div className="fixed  grid grid-flow-col p-3 items-center bg-white/90 z-10 w-screen">
       <div className="flex col-span-1.5  bg-white ">
         <img
           className="h-10 cursor-pointer "
@@ -192,7 +192,7 @@ const Header = () => {
           </button>
         </div>
 
-        {showSuggestion && (
+        {searchQuery && showSuggestion && (
           <div className="fixed bg-white shadow-lg w-1/3 px-2 py-2  rounded-lg border border-gray-100">
             <ul className="px-3 py-2 cursor-pointer flex flex-col gap-2">
               {searchQuery && (

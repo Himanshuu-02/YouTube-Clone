@@ -28,11 +28,13 @@ const VideoContainer = () => {
   return (
     <div
       className={`flex flex-wrap transition-all duration-300 ${
-        isMenuOpen ? "ml-40" : "ml-0"
+        isMenuOpen ? "ml-40" : "ml-5"
       }`}
     >
       {videoData.map((video) => (
-        <Link key={video.id} to={"/watch?v=" + video.id}>
+        <Link key={video.id} to={"/watch?v=" + video.id}
+        //that is use for share the data of videocard share to watch page
+        state={{videoInfo: video}}> 
           <VideoCard info={video} />
         </Link>
       ))}
