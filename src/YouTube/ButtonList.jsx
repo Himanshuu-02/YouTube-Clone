@@ -13,7 +13,7 @@ const buttonNames = [
 const ButtonList = () => {
   const isMenuOpen= useSelector(store=>store.app.isMenuOpen)
   return (
-    <div className={`px-4 py-2 w-full max-w-screen overflow-hidden transition-all duration-300 ${isMenuOpen ? "ml-45" : "ml-0"}`}>
+    <div className={`hidden md:block px-4 py-2 w-full max-w-screen overflow-hidden transition-all duration-300 ${isMenuOpen ? "ml-45" : "ml-0"}`}>
       <div className="flex gap-3 overflow-x-auto overscroll-x-contain w-full [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
         <button className='px-4 py-1 bg-gray-400 rounded-full text-lg font-medium whitespace-nowrap transition-colors duration-200 cursor-pointer'>All</button>
         {buttonNames.map((name, idx) => (
