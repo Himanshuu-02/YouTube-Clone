@@ -16,7 +16,8 @@ const SideBar = () => {
                 🏡 Home
               </li> </Link>
               <li className="hover:bg-gray-100 text-xl rounded px-2 py-1 cursor-pointer">
-                🎬 Shorts
+                <a href="https://www.youtube.com/shorts/7Lcnc6taKZY">🎬 Shorts</a>
+                
               </li>
               <Link to={"/"}><li className="hover:bg-gray-100 text-xl rounded px-2 py-1 cursor-pointer">
                 ▶️ Videos
@@ -97,19 +98,22 @@ const SideBar = () => {
             🏡 Home
           </li> </Link>
           <li className="hover:bg-gray-300 text-[12px] rounded px-2 mt-6 py-1 w-1/2 cursor-pointer">
-            ⭐ Subscriptions
+          <a href="https://www.youtube.com/feed/subscriptions"> ⭐ Subscriptions</a>
+           
           </li>
           <li className="hover:bg-gray-300 text-[12px] rounded px-2 mt-6 py-1 cursor-pointer">
             📺 WatchLater
           </li>
           <li className="hover:bg-gray-300 text-[12px] rounded px-2 mt-6 py-1 w-1/2  cursor-pointer">
-            📡 Live
+          <a href="https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig"> 📡 Live</a>
+           
           </li>
           <li className="hover:bg-gray-300 text-[12px] rounded px-2 mt-6 py-1  w-1/2 cursor-pointer">
             🔥 History
           </li>
           <li className="hover:bg-gray-300 text-[12px] rounded px-2 mt-6 py-1 w-1/2 cursor-pointer">
-            ⚙️ More
+          <a href="https://www.youtube.com/account">⚙️ More</a>
+            
           </li>
         </ul>
       

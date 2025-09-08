@@ -15,7 +15,7 @@ const WatchPage = () => {
   //used for share the data from videocard to watchpage
   const location = useLocation();
   const videoInfo = location.state?.videoInfo;
-  console.log(videoInfo);
+  //console.log(videoInfo);
 
   if (!videoInfo) return null;
   const dispatch = useDispatch();
@@ -40,7 +40,7 @@ const WatchPage = () => {
             allowfullscreen
           ></iframe>
         </div>
-        <div className=" w-full lg:w-[350px]  bg-gray-100 rounded-lg  h-[200px] md:h-[600px] lg:h-[600px]  ">
+        <div className=" w-[350] lg:w-[400px]  bg-gray-100 rounded-lg  h-[200px] md:h-[600px] lg:h-[600px] ">
           <LiveChat />
         </div>
       </div>

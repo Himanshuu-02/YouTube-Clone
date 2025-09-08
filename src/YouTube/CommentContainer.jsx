@@ -1,6 +1,7 @@
-import React from 'react'
-import FirstComment from './FirstComment'
-import CommentList from './CommentList';
+import React, { useState } from "react";
+import FirstComment from "./FirstComment";
+import CommentList from "./CommentList";
+import { useDispatch } from "react-redux";
 
 const commentsData = [
   {
@@ -38,11 +39,11 @@ const commentsData = [
                 createdAt: "2025-09-04T09:30:00Z",
                 isVerified: true,
                 avatarUrl: "https://i.pravatar.cc/150?img=7",
-                replies: []
-              }
-            ]
-          }
-        ]
+                replies: [],
+              },
+            ],
+          },
+        ],
       },
       {
         id: 12,
@@ -52,9 +53,9 @@ const commentsData = [
         createdAt: "2025-09-02T13:20:00Z",
         isVerified: false,
         avatarUrl: "https://i.pravatar.cc/150?img=4",
-        replies: []
-      }
-    ]
+        replies: [],
+      },
+    ],
   },
   {
     id: 2,
@@ -100,15 +101,15 @@ const commentsData = [
                     createdAt: "2025-09-05T09:50:00Z",
                     isVerified: true,
                     avatarUrl: "https://i.pravatar.cc/150?img=10",
-                    replies: []
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
+                    replies: [],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     id: 3,
@@ -127,9 +128,9 @@ const commentsData = [
         createdAt: "2025-09-02T20:30:00Z",
         isVerified: false,
         avatarUrl: "https://i.pravatar.cc/150?img=12",
-        replies: []
-      }
-    ]
+        replies: [],
+      },
+    ],
   },
   {
     id: 4,
@@ -148,26 +149,92 @@ const commentsData = [
         createdAt: "2025-09-02T22:45:00Z",
         isVerified: false,
         avatarUrl: "https://i.pravatar.cc/150?img=14",
-        replies: []
-      }
-    ]
-  }
+        replies: [],
+      },
+    ],
+  },
 ];
 
-
-
 const CommentContainer = () => {
-  
-  return (
-    <div className=' border-t-1 border-gray-300'>
-      <h1 className='mt-3  px-4.5 text-2xl font-bold mb-4'>
-        Comments:
-      </h1>
-      {/* <FirstComment data={commentsData[0]}/> */}
-      <CommentList comments={commentsData}/>
-    </div>
-  )
-}
-export default CommentContainer
-  
+  const [comment, setComment] = useState("");
+  const [comments, setComments] = useState([]);
+  const dispatch = useDispatch();
+  const commentChanger = (e) => {
+    setComment(e.target.value);
+  };
 
+  const commentHandler = (e) => {
+    e.preventDefault();
+    if (!comment) {
+      console.log("Please enter a comment");
+      return;
+    } else {
+      setComments([
+        ...comments,
+        {
+          id: Date.now(),
+          title: comment,
+          name: "Himanshu",
+          avatar:
+            "https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png",
+        },
+      ]);
+      setComment("");
+    }
+  };
+
+  return (
+    <div className=" border-t-1 border-gray-300">
+      <h1 className="mt-3  px-4.5 text-2xl font-bold mb-4">Comments:</h1>
+      {/* <FirstComment data={commentsData[0]}/> */}
+      <CommentList comments={commentsData} />
+      <div className=" ">
+        <div>
+          {/* <ul className="">
+            {comments.map((c) => (
+              <li
+                className="mr-4 shadow-sm bg-gray-100 rounded-lg p-3 my-2"
+                key={c.id}
+              >
+                {c.title}
+              </li>
+            ))}
+          </ul> */}
+          <ul>
+            {comments.map((c) => (
+              <li
+                key={c.id}
+                className="flex items-start gap-3 shadow-sm bg-gray-100 rounded-lg p-1.5 my-2"
+              >
+                <img
+                  src={c.avatar}
+                  alt={c.name}
+                  className="w-11 h-11 rounded-full"
+                />
+                <div>
+                  <h3 className="font-bold text-gray-700">@{c.name}</h3>
+                  <p className="text-gray-600">{c.title}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <input
+          className="w-1/2 border p-2.5 m-3 rounded-lg"
+          onChange={commentChanger}
+          type="text"
+          placeholder="Send a comment..."
+          value={comment}
+        />
+        <button
+          className="p-2.5 m-3  border cursor-pointer rounded-lg hover:bg-gray-200"
+          onClick={commentHandler}
+          d
+        >
+          Comment
+        </button>
+      </div>
+    </div>
+  );
+};
+export default CommentContainer;

@@ -10,7 +10,7 @@ const CommentList = ({comments}) => {
             <CommentList key={comment.id} comments={comment.replies}/>
 
         </div>
-
+       
     </div> 
   ))
 }
