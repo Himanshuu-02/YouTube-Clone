@@ -29,7 +29,7 @@ const LiveChat = () => {
   }, []);
   return (
     <>
-      <div className="ml-1 p-2   border border-black bg-slate-100 rounded-lg h-[200px] md:h-[600px] lg:h-[600px] overflow-y-scroll flex flex-col-reverse ">
+      <div className="ml-1 p-2 mt-6 md:mt-0  border border-black bg-slate-100 rounded-lg h-[200px] md:h-[600px] lg:h-[600px] overflow-y-scroll flex flex-col-reverse ">
         <div className="text-lg font-bold border-b border-b-gray-300 cursor-col-resize ">
           LiveChat :-
           <form

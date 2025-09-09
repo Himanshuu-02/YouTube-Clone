@@ -44,11 +44,11 @@ const WatchPage = () => {
           <LiveChat />
         </div>
       </div>
-      <div className="max-w-11/12 ">
-        <h1 className="mt-3 px-4 text-xl font-bold">{title}</h1>
+      <div className="max-w-11/12 mt-6 md:mt-0">
+        <h1 className="mt-3 px-4 text-lg md:text-xl font-bold">{title}</h1>
         <div className="flex gap-10">
           <div>
-            <h2 className="mt-1.5 p-5 text-lg font-bold">{channelTitle}</h2>
+            <h2 className="mt-1.5 p-5 text-sm md:text-lg font-bold">{channelTitle}</h2>
             <p className="-mt-4.5 px-5 text-gray-700 ">612k Suscribers</p>
           </div>
 

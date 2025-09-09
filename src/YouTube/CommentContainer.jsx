@@ -229,7 +229,6 @@ const CommentContainer = () => {
         <button
           className="p-2.5 m-3  border cursor-pointer rounded-lg hover:bg-gray-200"
           onClick={commentHandler}
-          d
         >
           Comment
         </button>
