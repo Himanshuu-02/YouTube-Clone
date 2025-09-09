@@ -11,7 +11,7 @@ const SideBar = () => {
       {isMenuOpen ? (
         <div className="fixed top-0 left-0 shadow-2xl py-2 w-46 md:w-56 h-full bg-white  ">
           <div className="overflow-y-scroll h-[calc(100vh-4rem)]  ">
-            <ul className="m-3 p-3 border-b border-gray-300 mt-20 md:mt-21">
+            <ul className="m-3 p-3 border-b border-gray-300 mt-20 md:mt-23">
               <Link to={"/"}>
                 <li className="hover:bg-gray-100 text-sm md:text-xl rounded px-2 py-1 cursor-pointer">
                   🏡 Home
@@ -24,20 +24,22 @@ const SideBar = () => {
               </li>
               <Link to={"/"}>
                 <li className="hover:bg-gray-100 text-sm md:text-xl rounded px-2 py-1 cursor-pointer">
-                  <a href="https://www.youtube.com/feed/playlists"> ▶️ Videos</a>
-                 
+                  <a href="https://www.youtube.com/feed/playlists">
+                    {" "}
+                    ▶️ Videos
+                  </a>
                 </li>
               </Link>
               <li className="hover:bg-gray-100 text-sm md:text-xl rounded px-2 py-1 cursor-pointer">
                 📡 Live
               </li>
               <li className="hover:bg-gray-100 text-sm md:text-xl rounded px-2 py-1 cursor-pointer">
-                <a href="https://www.youtube.com/channel/UC-9-kyTW8ZkZNDHQJ6FgpwQ">🔥 Trending</a>
-                
+                <a href="https://www.youtube.com/channel/UC-9-kyTW8ZkZNDHQJ6FgpwQ">
+                  🔥 Trending
+                </a>
               </li>
               <li className="hover:bg-gray-100 text-sm md:text-xl rounded px-2 py-1 cursor-pointer">
                 <a href="https://www.youtube.com/account"> ⚙️ More</a>
-               
               </li>
             </ul>
             <h1 className="font-bold py-2 ml-2">⭐ Subscriptions</h1>
@@ -129,30 +131,41 @@ const SideBar = () => {
             <ul className="  -m-1 p-3 border-b border-gray-300 mt-20 md:mt-10 ">
               <Link to={"/"}>
                 {" "}
-                <li className="hover:bg-gray-300 [text-8px] md:text-[14px] rounded px-2  mt-6 py-1 w-1/2 cursor-pointer ">
-                  🏡 Home
+                <li className="hover:bg-gray-300 [text-8px] md:text-[14px] rounded px-2  mt-6 py-1  cursor-pointer mr-3">
+                  <span className="ml-2"> 🏡 </span>
+
+                  <span className=" mr-4 hover:bg-gray-300">Home</span>
                 </li>{" "}
               </Link>
-              <li className="hover:bg-gray-300 text-[12px] rounded px-2 mt-6 py-1 w-1/2 cursor-pointer">
+              <li className="hover:bg-gray-300 text-[12px] rounded px-2 mt-6 py-1  cursor-pointer -ml-2">
                 <a href="https://www.youtube.com/feed/subscriptions">
-                  {" "}
-                  ⭐ Subscriptions
+                  <span className="ml-4">⭐</span>
+                  <span className="-mr-4 "> Subscriptions</span>
                 </a>
               </li>
-              <li className="hover:bg-gray-300 text-[12px] rounded px-2 mt-6 py-1 cursor-pointer">
-                📺 WatchLater
+              <li className="hover:bg-gray-300 text-[12px] rounded px-2 mt-6 py-1 cursor-pointer -ml-2">
+                <span className="ml-4">📺</span>
+                <span className=""> WatchLater</span>
               </li>
-              <li className="hover:bg-gray-300 text-[12px] rounded px-2 mt-6 py-1 w-1/2  cursor-pointer">
+              <li className="hover:bg-gray-300 text-[12px] rounded px-2 mt-6 py-1  w-1/2 cursor-pointer -mr-1.5">
                 <a href="https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig">
                   {" "}
-                  📡 Live
+                  <span className="ml-1">📡</span>
+                  <span className="text-[15px]">Live</span>
                 </a>
               </li>
-              <li className="hover:bg-gray-300 text-[12px] rounded px-2 mt-6 py-1  w-1/2 cursor-pointer">
-                🔥 History
+              <li className="hover:bg-gray-300 text-[12px] rounded px-2 mt-6 py-1  w-[45px] cursor-pointer -ml-1">
+                <span className="ml-3">🔥</span>
+                <span className=""> History</span>
               </li>
-              <li className="hover:bg-gray-300 text-[12px] rounded px-2 mt-6 py-1 w-1/2 cursor-pointer">
-                <a href="https://www.youtube.com/account">⚙️ More</a>
+              <li className="hover:bg-gray-300 text-[12px] rounded px-2 mt-6 py-1 w-[40px] cursor-pointer ml-0 flex flex-col items-center">
+                <a
+                  href="https://www.youtube.com/account"
+                  className="flex flex-col items-center"
+                >
+                  <span className="">⚙️</span>
+                  <span className="mt-1">More</span>
+                </a>
               </li>
             </ul>
 
