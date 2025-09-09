@@ -184,12 +184,12 @@ const CommentContainer = () => {
   };
 
   return (
-    <div className=" border-t-1 border-gray-300">
+    <div className=" border-t-1 border-gray-300 w-full m-5 md:m-0 ">
       <h1 className="mt-3  px-4.5 text-2xl font-bold mb-4">Comments:</h1>
       {/* <FirstComment data={commentsData[0]}/> */}
       <CommentList comments={commentsData} />
       <div className=" ">
-        <div>
+        <div className="">
           {/* <ul className="">
             {comments.map((c) => (
               <li
@@ -200,11 +200,11 @@ const CommentContainer = () => {
               </li>
             ))}
           </ul> */}
-          <ul>
+          <ul className="">
             {comments.map((c) => (
-              <li
+              <li 
                 key={c.id}
-                className="flex items-start gap-3 shadow-sm bg-gray-100 rounded-lg p-1.5 my-2"
+                className="flex items-start gap-3 shadow-sm bg-gray-100 rounded-lg p-1.5 my-2 "
               >
                 <img
                   src={c.avatar}
@@ -220,7 +220,7 @@ const CommentContainer = () => {
           </ul>
         </div>
         <input
-          className="w-1/2 border p-2.5 m-3 rounded-lg"
+          className="w-1/2  border p-2.5 m-3 rounded-lg"
           onChange={commentChanger}
           type="text"
           placeholder="Send a comment..."

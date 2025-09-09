@@ -28,7 +28,7 @@ const VideoContainer = () => {
   return (
     <div
       className={`flex flex-wrap transition-all duration-300 ${
-        isMenuOpen ? "ml-13 md:ml-40" : "ml-3"
+        isMenuOpen ? "ml-13 md:ml-40" : "ml-5"
       }`}
     >
       {videoData.map((video) => (

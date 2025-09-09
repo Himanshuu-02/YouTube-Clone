@@ -11,7 +11,7 @@ const SideBar = () => {
       {isMenuOpen ? (
         <div className="fixed top-0 left-0 shadow-2xl py-2 w-46 md:w-56 h-full bg-white  ">
           <div className="overflow-y-scroll h-[calc(100vh-4rem)]  ">
-            <ul className="m-3 p-3 border-b border-gray-300 mt-21">
+            <ul className="m-3 p-3 border-b border-gray-300 mt-20 md:mt-21">
               <Link to={"/"}>
                 <li className="hover:bg-gray-100 text-sm md:text-xl rounded px-2 py-1 cursor-pointer">
                   🏡 Home

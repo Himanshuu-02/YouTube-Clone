@@ -152,7 +152,7 @@ const suggestionHandler = async () => {
           onClick={toggleMenuHandler}
         />
         <img
-          className="h-8 ml-2 mt-1.5"
+          className="h-8 ml-2 mt-1"
           src="https://t4.ftcdn.net/jpg/07/32/01/31/360_F_732013128_4w36WRSEpuF1oT9nK0Bd31GT353WqFYi.jpg"
           alt="logo"
         />

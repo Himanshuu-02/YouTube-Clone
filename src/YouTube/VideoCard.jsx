@@ -13,7 +13,7 @@ const VideoCard = ({ info }) => {
           src={thumbnails.medium.url}
           alt="thumbnail"
         />
-        <ul className="  ">
+        <ul className="  p-2 md:p-1 -mt-2 md:-mt-2">
           <li className="font-bold  py-2.5">{title}</li>
           <li className="text-black">{channelTitle}</li>
           <li className="text-gray-600">
