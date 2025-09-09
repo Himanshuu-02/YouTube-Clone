@@ -24,17 +24,20 @@ const SideBar = () => {
               </li>
               <Link to={"/"}>
                 <li className="hover:bg-gray-100 text-sm md:text-xl rounded px-2 py-1 cursor-pointer">
-                  ▶️ Videos
+                  <a href="https://www.youtube.com/feed/playlists"> ▶️ Videos</a>
+                 
                 </li>
               </Link>
               <li className="hover:bg-gray-100 text-sm md:text-xl rounded px-2 py-1 cursor-pointer">
                 📡 Live
               </li>
               <li className="hover:bg-gray-100 text-sm md:text-xl rounded px-2 py-1 cursor-pointer">
-                🔥 Trending
+                <a href="https://www.youtube.com/channel/UC-9-kyTW8ZkZNDHQJ6FgpwQ">🔥 Trending</a>
+                
               </li>
               <li className="hover:bg-gray-100 text-sm md:text-xl rounded px-2 py-1 cursor-pointer">
-                ⚙️ More
+                <a href="https://www.youtube.com/account"> ⚙️ More</a>
+               
               </li>
             </ul>
             <h1 className="font-bold py-2 ml-2">⭐ Subscriptions</h1>
