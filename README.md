@@ -16,7 +16,7 @@ If you are developing a production application, we recommend using TypeScript wi
 ## Here i create a fully dynamic YouTube website clone .
 Author-Himanshu
 
-##Features
+# Features-
   -create a app by using vite+react
   -create header
   -create a Hamburger dynamic menu
@@ -27,5 +27,21 @@ Author-Himanshu
        -gitHub
        -Instagram
        -linkedin
+   -install react router dom
+   -create a another page which nape is web page
+   -link it with the every cards which is present in video container
+   -make it dyanic embeed the youtube video in the webpage which is link the cards of video
+   -in webpage make title and channel-name dynamic
+   -create the nested comment (raw data)
+   -create a feature to send a comment and show in ui
+   -create a live chat feature which renders continously after 1.5 sec 
+   -create a clear live comment feature which is automatically delete the prevoius comment after the chat 
+   -we can also share our comment in live chat
+   -make the website resposive 
+   -create a float button in ui which takes my social media accunt reference(links)
+   -at last fix all the issues
+   -app is done
+
+
 
   
