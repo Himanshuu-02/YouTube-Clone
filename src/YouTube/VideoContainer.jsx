@@ -4,6 +4,7 @@ import axios from "axios";
 import { Youtube_API_KEY } from "../utils/constants";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import Icons from "./Icons";
 
 const VideoContainer = () => {
   const [videoData, setVideoData] = useState([]);
@@ -27,8 +28,8 @@ const VideoContainer = () => {
   }, []);
   return (
     <div
-      className={`flex flex-wrap transition-all duration-300 ${
-        isMenuOpen ? "ml-13 md:ml-40" : "ml-5"
+      className={`flex flex-wrap space-x-1 transition-all duration-300 ${
+        isMenuOpen ? "ml-13 md:ml-48" : "ml-5"
       }`}
     >
       {videoData.map((video) => (
@@ -38,6 +39,7 @@ const VideoContainer = () => {
           <VideoCard info={video} />
         </Link>
       ))}
+      <Icons/>
     </div>
   );
 };

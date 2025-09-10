@@ -169,8 +169,8 @@ const SideBar = () => {
               </li>
             </ul>
 
-            <p className="mt-5 font-bold">Made by Himanshu 💕</p>
-            <div className="flex gap-4 mt-4">
+            {/* <p className="mt-5 font-bold">Made by Himanshu 💕</p> */}
+            {/* <div className="flex gap-4 mt-4">
               <a href="https://github.com/Himanshuu-02">
                 <img
                   src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
@@ -192,7 +192,7 @@ const SideBar = () => {
                   className="w-6 h-6"
                 />
               </a>
-            </div>
+            </div> */}
           </div>
         )
       )}

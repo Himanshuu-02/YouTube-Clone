@@ -13,13 +13,13 @@ const buttonNames = [
 const ButtonList = () => {
   const isMenuOpen= useSelector(store=>store.app.isMenuOpen)
   return (
-    <div className={`hidden md:block px-6  py-2 w-full max-w-screen overflow-hidden transition-all duration-300 ${isMenuOpen ? "ml-45" : "ml-0"}`}>
-      <div className="flex gap-3 overflow-x-auto overscroll-x-contain w-full [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+    <div className={`hidden md:block px-6  py-2 w-[91%] -mr-6 max-w-screen overflow-hidden transition-all duration-300 ${isMenuOpen ? "ml-45" : "ml-0"}`}>
+      <div className="flex gap-2 overflow-x-auto overscroll-x-contain w-full [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
         <button className='px-4 py-1 bg-gray-400 rounded-full text-lg font-medium whitespace-nowrap transition-colors duration-200 cursor-pointer'>All</button>
         {buttonNames.map((name, idx) => (
           <button
             key={idx}
-            className="px-4 py-1 bg-gray-100 hover:bg-gray-400 rounded-full text-lg font-medium whitespace-nowrap transition-colors duration-200 cursor-pointer"
+            className="px-4 py-1 bg-gray-100 hover:bg-gray-400 focus:outline-2  focus:outline-gray-800 rounded-full text-lg font-medium whitespace-nowrap transition-colors duration-200 cursor-pointer"
           >
             {name}
           </button>

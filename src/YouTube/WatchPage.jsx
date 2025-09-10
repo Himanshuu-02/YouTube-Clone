@@ -4,6 +4,7 @@ import { closeState } from "../utils/appSlice";
 import { useLocation, useSearchParams } from "react-router-dom";
 import CommentContainer from "./CommentContainer";
 import LiveChat from "./LiveChat";
+import Icons from "./Icons";
 
 const WatchPage = () => {
   const [searchParams] = useSearchParams();
@@ -25,7 +26,7 @@ const WatchPage = () => {
     dispatch(closeState());
   }, []);
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex space-y-4 md:space-x-1 flex-col w-full">
       <div className="mt-15 px-2 flex flex-col lg:flex-row w-full">
         <div className="flex-1 ">
           <iframe
@@ -40,7 +41,7 @@ const WatchPage = () => {
             allowfullscreen
           ></iframe>
         </div>
-        <div className=" w-[350] lg:w-[400px]  bg-gray-100 rounded-lg  h-[200px] md:h-[600px] lg:h-[600px] ">
+        <div className=" w-[350] lg:w-[400px]  bg-gray-100 rounded-lg  h-[200px] md:h-[600px] lg:h-[600px] mt-8 md:mt-0">
           <LiveChat />
         </div>
       </div>
@@ -66,6 +67,7 @@ const WatchPage = () => {
 
         <CommentContainer />
       </div>
+      <Icons/>
     </div>
   );
 };
